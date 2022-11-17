@@ -1,0 +1,101 @@
+package br.com.digitalhouse.entities;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import javax.persistence.*;
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
+@Entity
+@Table
+public class Product implements Serializable {
+    public static final long serialVersionUID = 1L;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+    private String name;
+    @Column(columnDefinition = "TEXT")
+    private String description;
+
+    // Relacionamento @ManyToMany entre as entidades Product e Feature
+    @ManyToMany
+    @JoinTable(name = "product_feature",
+            joinColumns = @JoinColumn(name = "id_product"),
+            inverseJoinColumns = @JoinColumn(name = "id_feature")
+    )
+    @JsonIgnore
+    private List<Feature> features = new ArrayList<>();
+
+    // Relacionamento @ManyToOne entre as entidades Category e Product
+    @ManyToOne(fetch = FetchType.EAGER, optional = true)
+    @JoinColumn(name = "id_category", nullable = true)
+    private Category category;
+
+    // Relacionamento @ManyToOne entre as entidades City e Product
+    @ManyToOne(fetch = FetchType.EAGER, optional = true)
+    @JoinColumn(name = "id_city", nullable = true)
+    private City city;
+
+    // Construtor padrão
+    public Product() {
+    }
+
+    // Construtor com atributos
+    public Product(Integer id, String name, String description) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+    }
+
+    // Getters and Setters
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public List<Feature> getFeatures() {
+        return features;
+    }
+
+    public void setFeatures(List<Feature> features) {
+        this.features = features;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+
+    public City getCity() {
+        return city;
+    }
+
+    public void setCity(City city) {
+        this.city = city;
+    }
+
+}
