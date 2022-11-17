@@ -38,6 +38,10 @@ public class Product implements Serializable {
     @JoinColumn(name = "id_city", nullable = true)
     private City city;
 
+    // Relacionamento @OneToMany entre as entidades Product e Image
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private List<Image> images = new ArrayList<>();
+
     // Construtor padrão
     public Product() {
     }
@@ -96,6 +100,14 @@ public class Product implements Serializable {
 
     public void setCity(City city) {
         this.city = city;
+    }
+
+    public List<Image> getImages() {
+        return images;
+    }
+
+    public void setImages(List<Image> images) {
+        this.images = images;
     }
 
 }

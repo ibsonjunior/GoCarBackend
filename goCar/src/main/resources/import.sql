@@ -35,68 +35,68 @@ INSERT INTO feature (name, icon) VALUES ('Câmbio Automático', 'https://cdn-ico
 
 -- Images
 -- Audi Q3
-INSERT INTO image (title, url_image) VALUES ('Audi Q3 - Frontal', 'https://live.staticflickr.com/65535/52488108356_ca9170be35_b.jpg');
-INSERT INTO image (title, url_image) VALUES ('Audi Q3 - Fundo', 'https://live.staticflickr.com/65535/52488417129_5cf37379f7_k.jpg');
-INSERT INTO image (title, url_image) VALUES ('Audi Q3 - Interno 01', 'https://live.staticflickr.com/65535/52487612037_cb1394543e_b.jpg');
-INSERT INTO image (title, url_image) VALUES ('Audi Q3 - Interno 02', 'https://live.staticflickr.com/65535/52488108386_53c3476cb3_h.jpg');
-INSERT INTO image (title, url_image) VALUES ('Audi Q3 - Interno 03', 'https://live.staticflickr.com/65535/52488108366_ba4627d90a_c.jpg');
-INSERT INTO image (title, url_image) VALUES ('Audi Q3 - Interno 04', 'https://live.staticflickr.com/65535/52488384804_f7ce58ce1c_b.jpg');
+INSERT INTO image (title, url_image, id_product) VALUES ('Audi Q3 - Frontal', 'https://live.staticflickr.com/65535/52488108356_ca9170be35_b.jpg', 8);
+INSERT INTO image (title, url_image, id_product) VALUES ('Audi Q3 - Fundo', 'https://live.staticflickr.com/65535/52488417129_5cf37379f7_k.jpg', 8);
+INSERT INTO image (title, url_image, id_product) VALUES ('Audi Q3 - Interno 01', 'https://live.staticflickr.com/65535/52487612037_cb1394543e_b.jpg', 8);
+INSERT INTO image (title, url_image, id_product) VALUES ('Audi Q3 - Interno 02', 'https://live.staticflickr.com/65535/52488108386_53c3476cb3_h.jpg', 8);
+INSERT INTO image (title, url_image, id_product) VALUES ('Audi Q3 - Interno 03', 'https://live.staticflickr.com/65535/52488108366_ba4627d90a_c.jpg', 8);
+INSERT INTO image (title, url_image, id_product) VALUES ('Audi Q3 - Interno 04', 'https://live.staticflickr.com/65535/52488384804_f7ce58ce1c_b.jpg', 8);
 
 -- BMW M2
-INSERT INTO image (title, url_image) VALUES ('BMW M2 - Frontal', 'https://live.staticflickr.com/65535/52488657338_55ba5167d2_k.jpg');
-INSERT INTO image (title, url_image) VALUES ('BMW M2 - Fundo', 'https://live.staticflickr.com/65535/52487611977_fd5c39b218_h.jpg');
-INSERT INTO image (title, url_image) VALUES ('BMW M2 - Interno 01', 'https://live.staticflickr.com/65535/52488108306_1e0832f7a3.jpg');
-INSERT INTO image (title, url_image) VALUES ('BMW M2 - Interno 02', 'https://live.staticflickr.com/65535/52488657378_63d19195e6_k.jpg');
-INSERT INTO image (title, url_image) VALUES ('BMW M2 - Interno 03', 'https://live.staticflickr.com/65535/52488574975_28591a4922_z.jpg');
-INSERT INTO image (title, url_image) VALUES ('BMW M2 - Interno 04', 'https://live.staticflickr.com/65535/52487611937_a956ecc35f_z.jpg');
+INSERT INTO image (title, url_image, id_product) VALUES ('BMW M2 - Frontal', 'https://live.staticflickr.com/65535/52488657338_55ba5167d2_k.jpg', 7);
+INSERT INTO image (title, url_image, id_product) VALUES ('BMW M2 - Fundo', 'https://live.staticflickr.com/65535/52487611977_fd5c39b218_h.jpg', 7);
+INSERT INTO image (title, url_image, id_product) VALUES ('BMW M2 - Interno 01', 'https://live.staticflickr.com/65535/52488108306_1e0832f7a3.jpg', 7);
+INSERT INTO image (title, url_image, id_product) VALUES ('BMW M2 - Interno 02', 'https://live.staticflickr.com/65535/52488657378_63d19195e6_k.jpg', 7);
+INSERT INTO image (title, url_image, id_product) VALUES ('BMW M2 - Interno 03', 'https://live.staticflickr.com/65535/52488574975_28591a4922_z.jpg', 7);
+INSERT INTO image (title, url_image, id_product) VALUES ('BMW M2 - Interno 04', 'https://live.staticflickr.com/65535/52487611937_a956ecc35f_z.jpg', 7);
 
 -- Jeep Compass
-INSERT INTO image (title, url_image) VALUES ('Jeep Compass - Frontal', 'https://live.staticflickr.com/65535/52487611812_10675967cc_k.jpg');
-INSERT INTO image (title, url_image) VALUES ('Jeep Compass - Teto', 'https://live.staticflickr.com/65535/52488384689_5113769683_h.jpg');
-INSERT INTO image (title, url_image) VALUES ('Jeep Compass - Interno 01', 'https://live.staticflickr.com/65535/52488384659_d17171f621_h.jpg');
-INSERT INTO image (title, url_image) VALUES ('Jeep Compass - Interno 02', 'https://live.staticflickr.com/65535/52488384679_81e9512f0a_h.jpg');
-INSERT INTO image (title, url_image) VALUES ('Jeep Compass - Interno 03', 'https://live.staticflickr.com/65535/52488108176_7e64f61c68_h.jpg');
-INSERT INTO image (title, url_image) VALUES ('Jeep Compass - Interno 04', 'https://live.staticflickr.com/65535/52488384649_d478f065f5_h.jpg');
+INSERT INTO image (title, url_image, id_product) VALUES ('Jeep Compass - Frontal', 'https://live.staticflickr.com/65535/52487611812_10675967cc_k.jpg', 4);
+INSERT INTO image (title, url_image, id_product) VALUES ('Jeep Compass - Teto', 'https://live.staticflickr.com/65535/52488384689_5113769683_h.jpg', 4);
+INSERT INTO image (title, url_image, id_product) VALUES ('Jeep Compass - Interno 01', 'https://live.staticflickr.com/65535/52488384659_d17171f621_h.jpg', 4);
+INSERT INTO image (title, url_image, id_product) VALUES ('Jeep Compass - Interno 02', 'https://live.staticflickr.com/65535/52488384679_81e9512f0a_h.jpg', 4);
+INSERT INTO image (title, url_image, id_product) VALUES ('Jeep Compass - Interno 03', 'https://live.staticflickr.com/65535/52488108176_7e64f61c68_h.jpg', 4);
+INSERT INTO image (title, url_image, id_product) VALUES ('Jeep Compass - Interno 04', 'https://live.staticflickr.com/65535/52488384649_d478f065f5_h.jpg', 4);
 
 -- Mercedes-Benz C300
-INSERT INTO image (title, url_image) VALUES ('Mercedes-Benz C300 - Frontal', 'https://live.staticflickr.com/65535/52488384609_8394664a51_k.jpg');
-INSERT INTO image (title, url_image) VALUES ('Mercedes-Benz C300 - Fundo', 'https://live.staticflickr.com/65535/52488657263_eb993d137d_k.jpg');
-INSERT INTO image (title, url_image) VALUES ('Mercedes-Benz C300 - Interno 01', 'https://live.staticflickr.com/65535/52488657243_dd6224e54b_k.jpg');
-INSERT INTO image (title, url_image) VALUES ('Mercedes-Benz C300 - Interno 02', 'https://live.staticflickr.com/65535/52488108121_b179e20bb3_b.jpg');
-INSERT INTO image (title, url_image) VALUES ('Mercedes-Benz C300 - Interno 03', 'https://live.staticflickr.com/65535/52488384539_4bce76bab4_k.jpg');
-INSERT INTO image (title, url_image) VALUES ('Mercedes-Benz C300 - Interno 04', 'https://live.staticflickr.com/65535/52488574755_a4f771fd5a_k.jpg');
+INSERT INTO image (title, url_image, id_product) VALUES ('Mercedes-Benz C300 - Frontal', 'https://live.staticflickr.com/65535/52488384609_8394664a51_k.jpg', 6);
+INSERT INTO image (title, url_image, id_product) VALUES ('Mercedes-Benz C300 - Fundo', 'https://live.staticflickr.com/65535/52488683299_3e2850de2a_z.jpg', 6);
+INSERT INTO image (title, url_image, id_product) VALUES ('Mercedes-Benz C300 - Interno 01', 'https://live.staticflickr.com/65535/52488657243_dd6224e54b_k.jpg', 6);
+INSERT INTO image (title, url_image, id_product) VALUES ('Mercedes-Benz C300 - Interno 02', 'https://live.staticflickr.com/65535/52488108121_b179e20bb3_b.jpg', 6);
+INSERT INTO image (title, url_image, id_product) VALUES ('Mercedes-Benz C300 - Interno 03', 'https://live.staticflickr.com/65535/52488406676_a3555ef998_z.jpg', 6);
+INSERT INTO image (title, url_image, id_product) VALUES ('Mercedes-Benz C300 - Interno 04', 'https://live.staticflickr.com/65535/52487911977_5acaaaa573_z.jpg', 6);
 
 -- Peugeot 208 e-GT
-INSERT INTO image (title, url_image) VALUES ('Peugeot 208 e-GT - Frontal', 'https://live.staticflickr.com/65535/52488384484_85408acd5b_k.jpg');
-INSERT INTO image (title, url_image) VALUES ('Peugeot 208 e-GT - Carregamento', 'https://live.staticflickr.com/65535/52488108071_957d7d6bc0_h.jpg');
-INSERT INTO image (title, url_image) VALUES ('Peugeot 208 e-GT - Interno 01', 'https://live.staticflickr.com/65535/52488686128_3f177a9fe5_k.jpg');
-INSERT INTO image (title, url_image) VALUES ('Peugeot 208 e-GT - Interno 02', 'https://live.staticflickr.com/65535/52488647825_099717d075_k.jpg');
-INSERT INTO image (title, url_image) VALUES ('Peugeot 208 e-GT - Interno 03', 'https://live.staticflickr.com/65535/52488657113_6ee1ac4544_h.jpg');
-INSERT INTO image (title, url_image) VALUES ('Peugeot 208 e-GT - Funcionamento', 'https://live.staticflickr.com/65535/52487611712_3177ae32d8_b.jpg');
+INSERT INTO image (title, url_image, id_product) VALUES ('Peugeot 208 e-GT - Frontal', 'https://live.staticflickr.com/65535/52488384484_85408acd5b_k.jpg', 5);
+INSERT INTO image (title, url_image, id_product) VALUES ('Peugeot 208 e-GT - Carregamento', 'https://live.staticflickr.com/65535/52488108071_957d7d6bc0_h.jpg', 5);
+INSERT INTO image (title, url_image, id_product) VALUES ('Peugeot 208 e-GT - Interno 01', 'https://live.staticflickr.com/65535/52488686128_3f177a9fe5_k.jpg', 5);
+INSERT INTO image (title, url_image, id_product) VALUES ('Peugeot 208 e-GT - Interno 02', 'https://live.staticflickr.com/65535/52488647825_099717d075_k.jpg', 5);
+INSERT INTO image (title, url_image, id_product) VALUES ('Peugeot 208 e-GT - Interno 03', 'https://live.staticflickr.com/65535/52488657113_6ee1ac4544_h.jpg', 5);
+INSERT INTO image (title, url_image, id_product) VALUES ('Peugeot 208 e-GT - Funcionamento', 'https://live.staticflickr.com/65535/52487611712_3177ae32d8_b.jpg', 5);
 
 -- Porsche 911 Carreira
-INSERT INTO image (title, url_image) VALUES ('Porsche 911 Carreira - Frontal', 'https://live.staticflickr.com/65535/52488574540_4cbbb61b72_b.jpg');
-INSERT INTO image (title, url_image) VALUES ('Porsche 911 Carreira - Lateral', 'https://live.staticflickr.com/65535/52488384364_ca8f7d9879_h.jpg');
-INSERT INTO image (title, url_image) VALUES ('Porsche 911 Carreira - Fundo', 'https://live.staticflickr.com/65535/52488108006_f4e70dd2f1_h.jpg');
-INSERT INTO image (title, url_image) VALUES ('Porsche 911 Carreira - Interno 01', 'https://live.staticflickr.com/65535/52487611637_4c76d95afa_h.jpg');
-INSERT INTO image (title, url_image) VALUES ('Porsche 911 Carreira - Interno 02', 'https://live.staticflickr.com/65535/52488574650_e57cf4aaa4_h.jpg');
-INSERT INTO image (title, url_image) VALUES ('Porsche 911 Carreira - Interno 03', 'https://live.staticflickr.com/65535/52488384354_f8602489d0_h.jpg');
+INSERT INTO image (title, url_image, id_product) VALUES ('Porsche 911 Carreira - Frontal', 'https://live.staticflickr.com/65535/52488574540_4cbbb61b72_b.jpg', 3);
+INSERT INTO image (title, url_image, id_product) VALUES ('Porsche 911 Carreira - Lateral', 'https://live.staticflickr.com/65535/52488384364_ca8f7d9879_h.jpg', 3);
+INSERT INTO image (title, url_image, id_product) VALUES ('Porsche 911 Carreira - Fundo', 'https://live.staticflickr.com/65535/52488108006_f4e70dd2f1_h.jpg', 3);
+INSERT INTO image (title, url_image, id_product) VALUES ('Porsche 911 Carreira - Interno 01', 'https://live.staticflickr.com/65535/52487611637_4c76d95afa_h.jpg', 3);
+INSERT INTO image (title, url_image, id_product) VALUES ('Porsche 911 Carreira - Interno 02', 'https://live.staticflickr.com/65535/52488574650_e57cf4aaa4_h.jpg', 3);
+INSERT INTO image (title, url_image, id_product) VALUES ('Porsche 911 Carreira - Interno 03', 'https://live.staticflickr.com/65535/52488384354_f8602489d0_h.jpg', 3);
 
 -- Range Rover Evoque
-INSERT INTO image (title, url_image) VALUES ('Range Rover Evoque - Frontal 01', 'https://live.staticflickr.com/65535/52488574430_a69bbeddd5_k.jpg');
-INSERT INTO image (title, url_image) VALUES ('Range Rover Evoque - Frontal 02', 'https://live.staticflickr.com/65535/52488384224_32ed3bd28c_k.jpg');
-INSERT INTO image (title, url_image) VALUES ('Range Rover Evoque - Lateral', 'https://live.staticflickr.com/65535/52488107921_5a22bcbe12_k.jpg');
-INSERT INTO image (title, url_image) VALUES ('Range Rover Evoque - Interno 01', 'https://live.staticflickr.com/65535/52488384324_887eb1febf_h.jpg');
-INSERT INTO image (title, url_image) VALUES ('Range Rover Evoque - Interno 02', 'https://live.staticflickr.com/65535/52488107931_e4a4c28fec_h.jpg');
-INSERT INTO image (title, url_image) VALUES ('Range Rover Evoque - Interno 03', 'https://live.staticflickr.com/65535/52488574495_be57bbc6dd_k.jpg');
+INSERT INTO image (title, url_image, id_product) VALUES ('Range Rover Evoque - Frontal 01', 'https://live.staticflickr.com/65535/52488574430_a69bbeddd5_k.jpg', 2);
+INSERT INTO image (title, url_image, id_product) VALUES ('Range Rover Evoque - Frontal 02', 'https://live.staticflickr.com/65535/52488384224_32ed3bd28c_k.jpg', 2);
+INSERT INTO image (title, url_image, id_product) VALUES ('Range Rover Evoque - Lateral', 'https://live.staticflickr.com/65535/52488107921_5a22bcbe12_k.jpg', 2);
+INSERT INTO image (title, url_image, id_product) VALUES ('Range Rover Evoque - Interno 01', 'https://live.staticflickr.com/65535/52488384324_887eb1febf_h.jpg', 2);
+INSERT INTO image (title, url_image, id_product) VALUES ('Range Rover Evoque - Interno 02', 'https://live.staticflickr.com/65535/52488107931_e4a4c28fec_h.jpg', 2);
+INSERT INTO image (title, url_image, id_product) VALUES ('Range Rover Evoque - Interno 03', 'https://live.staticflickr.com/65535/52488574495_be57bbc6dd_k.jpg', 2);
 
 -- Rolls Royce Phantom
-INSERT INTO image (title, url_image) VALUES ('Rolls Royce Phantom - Frontal', 'https://live.staticflickr.com/65535/52488574405_bc82fda75c_k.jpg');
-INSERT INTO image (title, url_image) VALUES ('Rolls Royce Phantom - Interno 01', 'https://live.staticflickr.com/65535/52487611412_ae6dbf0d18_b.jpg');
-INSERT INTO image (title, url_image) VALUES ('Rolls Royce Phantom - Interno 02', 'https://live.staticflickr.com/65535/52488574335_d8fa9ee77e_b.jpg');
-INSERT INTO image (title, url_image) VALUES ('Rolls Royce Phantom - Interno 03', 'https://live.staticflickr.com/65535/52488656863_ecb9bed5d7_k.jpg');
-INSERT INTO image (title, url_image) VALUES ('Rolls Royce Phantom - Interno 04', 'https://live.staticflickr.com/65535/52488656893_ebed63acc9_h.jpg');
-INSERT INTO image (title, url_image) VALUES ('Rolls Royce Phantom - Interno 05', 'https://live.staticflickr.com/65535/52488574365_966c840300_h.jpg');
+INSERT INTO image (title, url_image, id_product) VALUES ('Rolls Royce Phantom - Frontal', 'https://live.staticflickr.com/65535/52488574405_bc82fda75c_k.jpg', 1);
+INSERT INTO image (title, url_image, id_product) VALUES ('Rolls Royce Phantom - Interno 01', 'https://live.staticflickr.com/65535/52487611412_ae6dbf0d18_b.jpg', 1);
+INSERT INTO image (title, url_image, id_product) VALUES ('Rolls Royce Phantom - Interno 02', 'https://live.staticflickr.com/65535/52488574335_d8fa9ee77e_b.jpg', 1);
+INSERT INTO image (title, url_image, id_product) VALUES ('Rolls Royce Phantom - Interno 03', 'https://live.staticflickr.com/65535/52488656863_ecb9bed5d7_k.jpg', 1);
+INSERT INTO image (title, url_image, id_product) VALUES ('Rolls Royce Phantom - Interno 04', 'https://live.staticflickr.com/65535/52488656893_ebed63acc9_h.jpg', 1);
+INSERT INTO image (title, url_image, id_product) VALUES ('Rolls Royce Phantom - Interno 05', 'https://live.staticflickr.com/65535/52488574365_966c840300_h.jpg', 1);
 
 -- Relacionamento entre as tabelas Product e Feature
 -- Rolls Royce Phantom
@@ -177,13 +177,7 @@ INSERT INTO product_feature (id_product, id_feature) VALUES (8,7);
 INSERT INTO product_feature (id_product, id_feature) VALUES (8,8);
 INSERT INTO product_feature (id_product, id_feature) VALUES (8,9);
 
--- User
---INSERT INTO usuario (name, lastname, login, password) VALUES ('aila','torres','aila@gmail.com', '312456789');
---INSERT INTO AppUser (name, username, email, password, appUserRoles ) VALUES ('aila','torres','aila@gmail.com', '312456789', 'ROLE_USER');
-
---  private String name;
---    private String username;
---    private String email;
---    private String password;
---    @Enumerated(EnumType.STRING)
---    private AppUserRoles appUserRoles;
+-- Roles
+INSERT INTO roles(name) VALUES('ROLE_USER');
+INSERT INTO roles(name) VALUES('ROLE_MODERATOR');
+INSERT INTO roles(name) VALUES('ROLE_ADMIN');

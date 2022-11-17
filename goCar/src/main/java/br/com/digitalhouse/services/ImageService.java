@@ -1,8 +1,11 @@
 package br.com.digitalhouse.services;
 
 import br.com.digitalhouse.dtos.ImageDto;
+import br.com.digitalhouse.dtos.ProductForImageDto;
 import br.com.digitalhouse.entities.Image;
+import br.com.digitalhouse.entities.Product;
 import br.com.digitalhouse.repositories.ImageRepository;
+import br.com.digitalhouse.repositories.ProductRepository;
 import br.com.digitalhouse.services.exceptions.DatabaseCarException;
 import br.com.digitalhouse.services.exceptions.EntityCarNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +24,9 @@ public class ImageService {
 
     @Autowired
     private ImageRepository imageRepository;
+
+    @Autowired
+    private ProductRepository productRepository;
 
     // SearchAll
     @Transactional(readOnly = true)
@@ -86,6 +92,10 @@ public class ImageService {
     private void copyDtoForEntity(ImageDto imageDto, Image image) {
         image.setTitle(imageDto.getTitle());
         image.setUrlImage(imageDto.getUrlImage());
+
+        ProductForImageDto productForImageDto = imageDto.getProduct();
+        Product product = productRepository.getReferenceById(productForImageDto.getId());
+        image.setProduct(product);
     }
 
 }

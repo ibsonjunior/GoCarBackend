@@ -1,17 +1,8 @@
 package br.com.digitalhouse.services;
 
-import br.com.digitalhouse.dtos.CategoryForProductDto;
-import br.com.digitalhouse.dtos.CityForProductDto;
-import br.com.digitalhouse.dtos.FeatureDto;
-import br.com.digitalhouse.dtos.ProductDto;
-import br.com.digitalhouse.entities.Category;
-import br.com.digitalhouse.entities.City;
-import br.com.digitalhouse.entities.Feature;
-import br.com.digitalhouse.entities.Product;
-import br.com.digitalhouse.repositories.CategoryRepository;
-import br.com.digitalhouse.repositories.CityRepository;
-import br.com.digitalhouse.repositories.FeatureRepository;
-import br.com.digitalhouse.repositories.ProductRepository;
+import br.com.digitalhouse.dtos.*;
+import br.com.digitalhouse.entities.*;
+import br.com.digitalhouse.repositories.*;
 import br.com.digitalhouse.services.exceptions.DatabaseCarException;
 import br.com.digitalhouse.services.exceptions.EntityCarNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,10 +28,13 @@ public class ProductService {
     private CategoryRepository categoryRepository;
 
     @Autowired
+    private CityRepository cityRepository;
+
+    @Autowired
     private FeatureRepository featureRepository;
 
     @Autowired
-    private CityRepository cityRepository;
+    private ImageRepository imageRepository;
 
     // SearchAll
     @Transactional(readOnly = true)
@@ -115,6 +109,7 @@ public class ProductService {
         try {
             Product productReturn = productRepository.findById(id).orElseThrow(EntityNotFoundException::new);
             productReturn.getFeatures().clear();
+            productReturn.getImages().clear();
             Category categoryReturn = categoryRepository.findById(productReturn.getCategory().getId())
                     .orElseThrow(EntityNotFoundException::new);
             categoryReturn.getProducts().remove(productReturn);
@@ -144,6 +139,12 @@ public class ProductService {
         for (FeatureDto featureDto : productDto.getFeatures()) {
             Feature feature = featureRepository.getReferenceById(featureDto.getId());
             product.getFeatures().add(feature);
+        }
+
+        product.getImages().clear();
+        for (ImageDto imageDto : productDto.getImages()) {
+            Image image = imageRepository.getReferenceById(imageDto.getId());
+            product.getImages().add(image);
         }
 
         CategoryForProductDto categoryForProductDto = productDto.getCategory();

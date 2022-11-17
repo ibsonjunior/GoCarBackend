@@ -13,6 +13,7 @@ public class ProductDto implements Serializable {
     private String name;
     private String description;
     private List<FeatureDto> features = new ArrayList<>();
+    private List<ImageDto> images = new ArrayList<>();
     private CategoryForProductDto category;
     private CityForProductDto city;
 
@@ -30,6 +31,7 @@ public class ProductDto implements Serializable {
         this.name = product.getName();
         this.description = product.getDescription();
         product.getFeatures().forEach(features -> this.features.add(new FeatureDto(features)));
+        product.getImages().forEach(images -> this.images.add(new ImageDto(images)));
         this.category = new CategoryForProductDto(product.getCategory());
         this.city = new CityForProductDto(product.getCity());
     }
@@ -80,6 +82,14 @@ public class ProductDto implements Serializable {
 
     public void setCity(CityForProductDto city) {
         this.city = city;
+    }
+
+    public List<ImageDto> getImages() {
+        return images;
+    }
+
+    public void setImages(List<ImageDto> images) {
+        this.images = images;
     }
 
 }

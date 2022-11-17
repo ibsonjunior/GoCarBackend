@@ -15,6 +15,11 @@ public class Image implements Serializable {
     @Column(columnDefinition = "TEXT", name = "url_image")
     private String urlImage;
 
+    // Relacionamento @ManyToOne entre as entidades Product e Image
+    @ManyToOne(fetch = FetchType.EAGER, optional = true)
+    @JoinColumn(name = "id_product", nullable = true)
+    private Product product;
+
     // Construtor padrão
     public Image() {
     }
@@ -49,6 +54,14 @@ public class Image implements Serializable {
 
     public void setUrlImage(String urlImage) {
         this.urlImage = urlImage;
+    }
+
+    public Product getProduct() {
+        return product;
+    }
+
+    public void setProduct(Product product) {
+        this.product = product;
     }
 
 }

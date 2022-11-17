@@ -2,7 +2,7 @@ version: "3.7"
 services:
   #outro container --- backend
   springweb:
-    container_name: dockerbackend
+    container_name: back_server_gocar
     build: . #preciso do Dockerfile para gerar a imagem
     image: "gocar"
     ports:
