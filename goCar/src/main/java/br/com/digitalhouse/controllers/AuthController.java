@@ -60,11 +60,14 @@ public class AuthController {
                 .map(item -> item.getAuthority())
                 .collect(Collectors.toList());
 
-        return ResponseEntity.ok(new JwtResponse(jwt,
+        return ResponseEntity.ok(new JwtResponse(
                 userDetails.getId(),
                 userDetails.getUsername(),
+                userDetails.getName(),
+                userDetails.getLastname(),
                 userDetails.getEmail(),
-                roles));
+                roles,
+                jwt));
     }
 
     @PostMapping("/signup")
@@ -83,6 +86,8 @@ public class AuthController {
 
         // Create new user's account
         User user = new User(signUpRequest.getUsername(),
+                signUpRequest.getName(),
+               signUpRequest.getLastname(),
                 signUpRequest.getEmail(),
                 encoder.encode(signUpRequest.getPassword()));
 

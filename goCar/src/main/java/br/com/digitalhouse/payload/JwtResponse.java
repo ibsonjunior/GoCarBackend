@@ -3,35 +3,42 @@ package br.com.digitalhouse.payload;
 import java.util.List;
 
 public class JwtResponse {
-    private String token;
-    private String type = "Bearer";
+
     private Long id;
     private String username;
+    private String name;
+    private String lastname;
+
     private String email;
     private List<String> roles;
+    private String type = "Bearer";
 
-    public JwtResponse(String accessToken, Long id, String username, String email, List<String> roles) {
-        this.token = accessToken;
+    private String token;
+
+    public JwtResponse( Long id, String username, String name, String lastname, String email, List<String> roles, String token) {
         this.id = id;
         this.username = username;
+        this.name = name;
+        this.lastname = lastname;
         this.email = email;
         this.roles = roles;
+        this.token = token;
     }
 
-    public String getAccessToken() {
+    public String getToken() {
         return token;
     }
 
-    public void setAccessToken(String accessToken) {
-        this.token = accessToken;
+    public void setToken(String token) {
+        this.token = token;
     }
 
-    public String getTokenType() {
+    public String getType() {
         return type;
     }
 
-    public void setTokenType(String tokenType) {
-        this.type = tokenType;
+    public void setType(String type) {
+        this.type = type;
     }
 
     public Long getId() {
@@ -42,14 +49,6 @@ public class JwtResponse {
         this.id = id;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
     public String getUsername() {
         return username;
     }
@@ -58,7 +57,35 @@ public class JwtResponse {
         this.username = username;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     public List<String> getRoles() {
         return roles;
+    }
+
+    public void setRoles(List<String> roles) {
+        this.roles = roles;
     }
 }

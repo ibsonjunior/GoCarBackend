@@ -5,42 +5,58 @@ import java.util.Set;
 public class SignupRequest  {
 
         private String username;
-        private String email;
-         private String password;
+        private String name;
+        private String lastname;
 
+        private String email;
+        private String password;
         private Set<String> role;
 
+    public String getUsername() {
+        return username;
+    }
 
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
-        public String getUsername() {
-            return username;
-        }
+    public String getName() {
+        return name;
+    }
 
-        public void setUsername(String username) {
-            this.username = username;
-        }
+    public void setName(String name) {
+        this.name = name;
+    }
 
-        public String getEmail() {
-            return email;
-        }
+    public String getLastname() {
+        return lastname;
+    }
 
-        public void setEmail(String email) {
-            this.email = email;
-        }
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
 
-        public String getPassword() {
-            return password;
-        }
+    public String getEmail() {
+        return email;
+    }
 
-        public void setPassword(String password) {
-            this.password = password;
-        }
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
-        public Set<String> getRole() {
-            return this.role;
-        }
+    public String getPassword() {
+        return password;
+    }
 
-        public void setRole(Set<String> role) {
-            this.role = role;
-        }
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public Set<String> getRole() {
+        return role;
+    }
+
+    public void setRole(Set<String> role) {
+        this.role = role;
+    }
 }
