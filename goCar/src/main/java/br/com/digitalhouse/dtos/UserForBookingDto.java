@@ -8,14 +8,13 @@ public class UserForBookingDto implements Serializable {
     public static final long serialVersionUID = 1L;
 
     private Long id;
-    private String name;
 
     public UserForBookingDto() {
     }
 
-    public UserForBookingDto(Long id, String name) {
+    public UserForBookingDto(Long id) {
         this.id = id;
-        this.name = name;
+
     }
 
     public UserForBookingDto(User user) {
@@ -30,11 +29,4 @@ public class UserForBookingDto implements Serializable {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 }

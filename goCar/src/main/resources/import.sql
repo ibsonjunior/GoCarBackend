@@ -181,3 +181,7 @@ INSERT INTO product_feature (id_product, id_feature) VALUES (8,9);
 INSERT INTO roles(name) VALUES('ROLE_USER');
 INSERT INTO roles(name) VALUES('ROLE_MODERATOR');
 INSERT INTO roles(name) VALUES('ROLE_ADMIN');
+
+
+--Booking
+--INSERT INTO Booking(initialTime, initalDay, finalDay) VALUES('1322123', '546456645', '978798546');

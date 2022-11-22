@@ -17,6 +17,8 @@ public class ProductDto implements Serializable {
     private CategoryForProductDto category;
     private CityForProductDto city;
 
+    private List<BookingForProductDto> booking = new ArrayList<>();
+
     public ProductDto() {
     }
 
@@ -34,6 +36,15 @@ public class ProductDto implements Serializable {
         product.getImages().forEach(images -> this.images.add(new ImageDto(images)));
         this.category = new CategoryForProductDto(product.getCategory());
         this.city = new CityForProductDto(product.getCity());
+        product.getBookings().forEach(bookings -> this.booking.add(new BookingForProductDto(bookings)));
+    }
+
+    public List<BookingForProductDto> getBooking() {
+        return booking;
+    }
+
+    public void setBooking(List<BookingForProductDto> booking) {
+        this.booking = booking;
     }
 
     public Integer getId() {

@@ -2,10 +2,13 @@ package br.com.digitalhouse.services;
 
 import br.com.digitalhouse.dtos.BookingDto;
 import br.com.digitalhouse.dtos.ProductForImageDto;
+import br.com.digitalhouse.dtos.UserForBookingDto;
 import br.com.digitalhouse.entities.Booking;
 import br.com.digitalhouse.entities.Product;
+import br.com.digitalhouse.entities.User;
 import br.com.digitalhouse.repositories.BookingRepository;
 import br.com.digitalhouse.repositories.ProductRepository;
+import br.com.digitalhouse.repositories.UserRepository;
 import br.com.digitalhouse.services.exceptions.DatabaseCarException;
 import br.com.digitalhouse.services.exceptions.EntityCarNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +27,9 @@ public class BookingService {
 
     @Autowired
     ProductRepository productRepository;
+
+    @Autowired
+    UserRepository userRepository;
 
     // SearchAll
     @Transactional(readOnly = true)
@@ -63,5 +69,9 @@ public class BookingService {
         ProductForImageDto productForImageDto = bookingDto.getProduct();
         Product product = productRepository.getReferenceById(productForImageDto.getId());
         booking.setProduct(product);
+
+        UserForBookingDto userForBookingDto = bookingDto.getUser();
+        User user = userRepository.getReferenceById(userForBookingDto.getId());
+        booking.setUser(user);
     }
 }

@@ -1,7 +1,4 @@
 package br.com.digitalhouse.controllers;
-
-
-
 import br.com.digitalhouse.config.jwt.JwtUtils;
 import br.com.digitalhouse.entities.ERole;
 import br.com.digitalhouse.entities.Role;
@@ -65,7 +62,6 @@ public class AuthController {
                 userDetails.getUsername(),
                 userDetails.getName(),
                 userDetails.getLastname(),
-                userDetails.getEmail(),
                 roles,
                 jwt));
     }
@@ -78,17 +74,10 @@ public class AuthController {
                     .body(new MessageResponse("Error: Username is already taken!"));
         }
 
-        if (userRepository.existsByEmail(signUpRequest.getEmail())) {
-            return ResponseEntity
-                    .badRequest()
-                    .body(new MessageResponse("Error: Email is already in use!"));
-        }
-
         // Create new user's account
         User user = new User(signUpRequest.getUsername(),
                 signUpRequest.getName(),
                signUpRequest.getLastname(),
-                signUpRequest.getEmail(),
                 encoder.encode(signUpRequest.getPassword()));
 
         Set<String> strRoles = signUpRequest.getRole();

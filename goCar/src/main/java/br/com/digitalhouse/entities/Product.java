@@ -5,7 +5,9 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table
@@ -40,7 +42,11 @@ public class Product implements Serializable {
 
     // Relacionamento @OneToMany entre as entidades Product e Image
     @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private List<Image> images = new ArrayList<>();
+    private Set<Image> images = new HashSet<>();
+
+    //Relacionamento @OneToMany entre as entidades Product e Booking
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private Set<Booking> bookings = new HashSet<>();
 
     // Construtor padrão
     public Product() {
@@ -102,12 +108,19 @@ public class Product implements Serializable {
         this.city = city;
     }
 
-    public List<Image> getImages() {
+    public Set<Image> getImages() {
         return images;
     }
 
-    public void setImages(List<Image> images) {
+    public void setImages(Set<Image> images) {
         this.images = images;
     }
 
+    public Set<Booking> getBookings() {
+        return bookings;
+    }
+
+    public void setBookings(Set<Booking> bookings) {
+        this.bookings = bookings;
+    }
 }

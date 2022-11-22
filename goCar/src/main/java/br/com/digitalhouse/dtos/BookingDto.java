@@ -9,16 +9,17 @@ public class BookingDto implements Serializable {
     public static final long serialVersionUID = 1L;
 
     private Integer id;
-    private LocalDateTime initialTime;
-    private LocalDateTime initalDay;
-    private LocalDateTime finalDay;
+    private  String initialTime;
+    private  String initalDay;
+    private  String finalDay;
     private ProductForImageDto product;
-//    private UserForBookingDto user;
+
+    private UserForBookingDto user;
 
     public BookingDto() {
     }
 
-    public BookingDto(Integer id, LocalDateTime initialTime, LocalDateTime initalDay, LocalDateTime finalDay) {
+    public BookingDto(Integer id,  String initialTime,  String initalDay,  String finalDay) {
         this.id = id;
         this.initialTime = initialTime;
         this.initalDay = initalDay;
@@ -31,7 +32,7 @@ public class BookingDto implements Serializable {
         this.initalDay = booking.getInitalDay() ;
         this.finalDay = booking.getFinalDay() ;
         this.product = new ProductForImageDto(booking.getProduct());
-//        this.user = new UserForBookingDto(booking.)
+        this.user = new UserForBookingDto(booking.getUser());
     }
 
     public Integer getId() {
@@ -42,27 +43,27 @@ public class BookingDto implements Serializable {
         this.id = id;
     }
 
-    public LocalDateTime getInitialTime() {
+    public String getInitialTime() {
         return initialTime;
     }
 
-    public void setInitialTime(LocalDateTime initialTime) {
+    public void setInitialTime(String initialTime) {
         this.initialTime = initialTime;
     }
 
-    public LocalDateTime getInitalDay() {
+    public String getInitalDay() {
         return initalDay;
     }
 
-    public void setInitalDay(LocalDateTime initalDay) {
+    public void setInitalDay(String initalDay) {
         this.initalDay = initalDay;
     }
 
-    public LocalDateTime getFinalDay() {
+    public String getFinalDay() {
         return finalDay;
     }
 
-    public void setFinalDay(LocalDateTime finalDay) {
+    public void setFinalDay(String finalDay) {
         this.finalDay = finalDay;
     }
 
@@ -72,5 +73,13 @@ public class BookingDto implements Serializable {
 
     public void setProduct(ProductForImageDto product) {
         this.product = product;
+    }
+
+    public UserForBookingDto getUser() {
+        return user;
+    }
+
+    public void setUser(UserForBookingDto user) {
+        this.user = user;
     }
 }

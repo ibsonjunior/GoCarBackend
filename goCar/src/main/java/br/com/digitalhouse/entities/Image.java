@@ -16,7 +16,7 @@ public class Image implements Serializable {
     private String urlImage;
 
     // Relacionamento @ManyToOne entre as entidades Product e Image
-    @ManyToOne(fetch = FetchType.EAGER, optional = true)
+    @ManyToOne(fetch = FetchType.LAZY, optional = true)
     @JoinColumn(name = "id_product", nullable = true)
     private Product product;
 

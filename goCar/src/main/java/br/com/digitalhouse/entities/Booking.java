@@ -2,7 +2,8 @@ package br.com.digitalhouse.entities;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.time.LocalDateTime;
+
+
 
 @Entity
 @Table
@@ -13,28 +14,29 @@ public class Booking implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private LocalDateTime initialTime;
-    private LocalDateTime initalDay;
-    private LocalDateTime finalDay;
+    private String initialTime;
+    private String initalDay;
+    private String finalDay;
 
-    @ManyToOne(fetch = FetchType.EAGER, optional = true)
+
+    @ManyToOne(fetch = FetchType.LAZY, optional = true)
     @JoinColumn(name = "id_product", nullable = true)
     private Product product;
 
-    @ManyToOne(fetch = FetchType.EAGER, optional = true)
+    @ManyToOne(fetch = FetchType.LAZY, optional = true)
     @JoinColumn(name = "id_user", nullable = true)
     private User user;
 
     public Booking() {
     }
 
-    public Booking(LocalDateTime initialTime, LocalDateTime initalDay, LocalDateTime finalDay) {
+    public Booking( String initialTime,  String initalDay,  String finalDay) {
         this.initialTime = initialTime;
         this.initalDay = initalDay;
         this.finalDay = finalDay;
     }
 
-    public Booking(Integer id, LocalDateTime initialTime, LocalDateTime initalDay, LocalDateTime finalDay) {
+    public Booking(Integer id,  String initialTime,  String initalDay,  String finalDay) {
         this.id = id;
         this.initialTime = initialTime;
         this.initalDay = initalDay;
@@ -49,27 +51,27 @@ public class Booking implements Serializable {
         this.id = id;
     }
 
-    public LocalDateTime getInitialTime() {
+    public String getInitialTime() {
         return initialTime;
     }
 
-    public void setInitialTime(LocalDateTime initialTime) {
+    public void setInitialTime(String initialTime) {
         this.initialTime = initialTime;
     }
 
-    public LocalDateTime getInitalDay() {
+    public String getInitalDay() {
         return initalDay;
     }
 
-    public void setInitalDay(LocalDateTime initalDay) {
+    public void setInitalDay(String initalDay) {
         this.initalDay = initalDay;
     }
 
-    public LocalDateTime getFinalDay() {
+    public String getFinalDay() {
         return finalDay;
     }
 
-    public void setFinalDay(LocalDateTime finalDay) {
+    public void setFinalDay(String finalDay) {
         this.finalDay = finalDay;
     }
 
@@ -79,5 +81,13 @@ public class Booking implements Serializable {
 
     public void setProduct(Product product) {
         this.product = product;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }

@@ -36,6 +36,9 @@ public class ProductService {
     @Autowired
     private ImageRepository imageRepository;
 
+    @Autowired
+    private BookingRepository bookingRepository;
+
     // SearchAll
     @Transactional(readOnly = true)
     public List<ProductDto> searchAll() {
@@ -145,6 +148,13 @@ public class ProductService {
         for (ImageDto imageDto : productDto.getImages()) {
             Image image = imageRepository.getReferenceById(imageDto.getId());
             product.getImages().add(image);
+        }
+
+        //Booking Service
+        product.getBookings().clear();
+        for (BookingForProductDto bookingDto : productDto.getBooking()) {
+            Booking booking = bookingRepository.getReferenceById(bookingDto.getId());
+            product.getBookings().add(booking);
         }
 
         CategoryForProductDto categoryForProductDto = productDto.getCategory();
